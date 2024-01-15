@@ -1,5 +1,5 @@
 provider "google" {
-    project = "your-project-id"
+    project = "wordpress-411322"
     region  = "us-central1"
 }
 
