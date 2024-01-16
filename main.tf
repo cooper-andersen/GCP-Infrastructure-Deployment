@@ -1,11 +1,11 @@
 provider "google" {
-    project = "your-project-id"
+    project = "wordpress-411322"
     region  = "us-central1"
 }
 
 resource "google_compute_instance" "vm_instance" {
     name         = "my-vm"
-    machine_type = "e2-micro" // Change machine type to e2-micro
+    machine_type = "f1-micro"
     zone         = "us-central1-a"
 
     boot_disk {
@@ -99,7 +99,7 @@ resource "google_compute_instance_template" "vm_instance_template" {
     description = "Instance template for WordPress VMs"
 
     properties {
-        machine_type = "e2-micro" // Change machine type to e2-micro
+        machine_type = "f1-micro"
         disks {
             boot        = true
             auto_delete = true
